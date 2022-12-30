@@ -2,10 +2,12 @@ import React from "react";
 import benja from "../Assets/Images/benja.jpg"
 import { BsFillSunFill, BsMoonStarsFill} from 'react-icons/bs';
 import { useEffect, useState } from "react";
+import DropDownProfile from "./DropDownProfile";
 
 
 
 const Navbar = () => {
+
     const menuLinks = [
         { name: 'HOME',link: "#home"},
         { name: 'REGISTER', link: "#register"},
@@ -45,6 +47,8 @@ const Navbar = () => {
     const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
 }
+    //dropdown state
+    const [openProfile, setOpenProfile] = useState(false);
 
     return(
         <nav className="bg-gradient-to-r from-cyan-700 via-teal-500 to-slate-900">
@@ -95,8 +99,12 @@ const Navbar = () => {
                     <button onClick={handleThemeSwitch} className="left-px">
                         {theme === 'light' ?  <BsMoonStarsFill/> : <BsFillSunFill/>}
                     </button>
-                    <div className="border-white border-2 rounded-full">
+                    <div className="border-white border-2 rounded-full cursor-pointer" onClick={() => setOpenProfile
+                        ((prev) => !prev)}>
                         <img src={benja} alt="" className="w-8 h-8 rounded-full"/>
+                        {
+                            openProfile && <DropDownProfile />
+                        }
                     </div>
                 
                 </div>
