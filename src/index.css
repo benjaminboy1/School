@@ -15,23 +15,12 @@ code {
 .dropDownProfile{
   position: absolute;
   top: 4rem;
-  right: 0.2rem;
+  right: 1rem;
   width: 150px;
   padding: 19px;
   border-radius: 15px;
   background-color: white;
   border: 1px solid gray;
 }
-.dropDownProfile::before{
 
-  content: '';
-  position: absolute;
-  top:  -0.6rem;
-  right: 2rem;
-  width: 20px;
-  height: 20px;
-  transform: rotate(45deg);
-  background-color: white;
-  border-left: 1px solid gray;
-  border-top: 1px solid gray;
-}
+
