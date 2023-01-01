@@ -50,12 +50,13 @@ const Navbar = () => {
     //dropdown state
     const [openProfile, setOpenProfile] = useState(false);
 
+    
     return(
         <nav className="bg-gradient-to-r from-cyan-700 via-teal-500 to-slate-900">
             <div className="flex container items-center justify-between mx-auto">
                 
-                <div className="mx-7">
-                    <h4 className="justify-start text-cyan-100 text-1xl ">
+                <div className="mx-7 ">
+                    <h4 className=" justify-start text-cyan-100 text-lg ">
                       BenmSchool
                     </h4>
                 </div>
