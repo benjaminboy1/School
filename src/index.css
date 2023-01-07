@@ -22,5 +22,11 @@ code {
   background-color: white;
   border: 1px solid gray;
 }
+@media (min-width: 768px) {
+  .btnmenu{
+    display: none;
+  }
+}
+
 
 

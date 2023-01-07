@@ -1,9 +1,17 @@
 
 
-const DropDownProfile = () =>{
+const DropDownProfile = ({ onClose}) => {
+      //dropdownClose
+      const handleOnClose = (e) =>{
+        if (e.target.id === "thing")
+        onClose();
+    };
+    if(onClose) return null;
     return(
 
-        <div className="flex flex-col dropDownProfile">
+        <div id="thing" 
+        onClick={handleOnClose}
+        className="flex flex-col dropDownProfile">
             <ul className="flex flex-col gap-4 text-center text-cyan-700">
             <li className="hover:text-gray-600 hover:animate-bounce"><ion-icon name="person-circle-sharp" />  Profile</li>
                 <li className="hover:text-gray-600 hover:animate-bounce"><ion-icon name="settings-sharp" className=""></ion-icon> Settings</li>
